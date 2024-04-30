@@ -1,0 +1,84 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2407,         76]
+NotebookOptionsPosition[      2051,         62]
+NotebookOutlinePosition[      2454,         78]
+CellTagsIndexPosition[      2411,         75]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  FractionBox[
+   SuperscriptBox["\[ScriptCapitalF]", "0"], 
+   RowBox[{"\[Sqrt]", 
+    RowBox[{"(", "h", ")"}]}]], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", "W", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Gamma]", " ", 
+      SuperscriptBox["W", "2"], 
+      SubscriptBox["v", "i"]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Gamma]", " ", 
+       SuperscriptBox["W", "2"]}], "-", "W", "-", "\[Chi]"}], "}"}], ",", 
+    RowBox[{"{", 
+     SuperscriptBox["0", "i"], "}"}], ",", 
+    RowBox[{"{", "0", "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  FractionBox[
+   SuperscriptBox["\[ScriptCapitalF]", "k"], 
+   RowBox[{"\[Alpha]", 
+    RowBox[{"\[Sqrt]", 
+     RowBox[{"(", "h", ")"}]}]}]], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", "}"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.871492389073327*^9, 3.8714925807519646`*^9}, {
+  3.8714926187473726`*^9, 3.8714926284898243`*^9}, {3.8714926686380024`*^9, 
+  3.8714928700142803`*^9}, {3.8714929179968405`*^9, 3.8714929228876467`*^9}, {
+  3.871493817956231*^9, 3.8714938462634974`*^9}, {3.8714940084487314`*^9, 
+  3.871494011291253*^9}, {3.8714941436307936`*^9, 3.871494151188922*^9}, {
+  3.8716465852283134`*^9, 3.8716466779797144`*^9}, {3.8716483094969606`*^9, 
+  3.87164831209343*^9}},ExpressionUUID->"aa2d89ae-ec57-4b5e-a0e0-\
+0f6b1e1eac0b"]
+},
+WindowSize->{960, 478},
+WindowMargins->{{Automatic, -2.75}, {Automatic, -5.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7bfdd5ae-4c61-4be9-8c30-73c7dec529c2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1489, 40, 100, "Input",ExpressionUUID->"aa2d89ae-ec57-4b5e-a0e0-0f6b1e1eac0b"]
+}
+]
+*)
+
