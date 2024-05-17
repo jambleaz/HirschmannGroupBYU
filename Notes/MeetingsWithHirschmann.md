@@ -31,3 +31,14 @@ Items worked on today:
  * Idea behind cost/benefit tradeoff using compact finite differences
  * Review of proving stability for a scheme using simple wave equation
  * Pseudo-proof of stability for the basic CFDA scheme
+
+
+## 5/14/2024
+Today, we worked on trying to figure out how to implement the boundary conditions in the Numex code for a while, which is surprisingly different for a system of first-order equations than for a single second-order equation. We were finally able to figure out how to include Dirichlet, Neumann, and periodic boundary conditions in the code, and we suspect that the original implemented boundary conditions were Sommerfeld conditions.
+
+We discussed our Mathematica module that takes as an input a discretized scheme and outputs the function after a Fourier transform to see if it is a stable scheme (related to dispersion), and we also discussed a function we have to compute the entries of the $C_{ij}$ matrix for the tridiagonal matrix CFDA scheme. If the eigenvalues of this matrix are all positive (the matrix is positive definite), then the scheme is stable, so this code is helpful. We are going to start looking at doing the same thing for the pentadiagonal matrix.
+
+Items worked on today:
+ * Coding boundary conditions
+ * Mathematica Fourier analysis module
+ * Find entries for the $C_{ij}$ matrix for the CFDA scheme
