@@ -42,3 +42,13 @@ Items worked on today:
  * Coding boundary conditions
  * Mathematica Fourier analysis module
  * Find entries for the $C_{ij}$ matrix for the CFDA scheme
+
+
+## 5/21/2024
+Today, we walked through solving the 1D Wave equation (system) using the method of characteristics rather than the method of separation of variables. Now having an analytic solution to the Wave equation (system), we are able to plot the analytic and numeric solutions together, as well as subtract or take the L2 norm to find the error of our numeric solutions.
+
+We spent some time talking about the determinants of pentadiagonal matrices, and our Mathematica code to compute the determinant using the analytic expression and compare it with the determinant found using the built-in function was showing that the determinant had an imaginary component, so it seems that there was either some serious roundoff error or the previously found analytic expression had some small errors. We were able to find another expression that matches the built-in determinant function exactly, so we just need to compare it to find where the error in the first analytic solution was.
+
+Items worked on today:
+ * Analytic solutions with the method of characteristics
+ * Pentadiagonal matrix determinants
