@@ -1,0 +1,28 @@
+grid:
+  xmin: 0.0
+  xmax: 1.0
+  ymin: 0.0
+  ymax: 1.0
+  nx: 201
+  ny: 201
+  ghostwidth: 2
+
+numerics:
+  itmax: 50000
+  cfl: 0.10
+  # dtype -> 0-2nd, 1-4th, 2-6th, 3-2Dcfd, 4-1Dcfd
+  dtype: 4
+  # dissipation -> -2 pre-compact, -1 pre-KO, 2 post-compact
+  dissipation: 2
+
+initdata:
+  idtype: 1
+  idwg_bzamp: 1.0
+  idwg_omega: 10.0
+  idwg_m_mode: 3
+  idwg_n_mode: 5
+
+output:
+  vtkfreq: 500
+  asciifreq: 100
+

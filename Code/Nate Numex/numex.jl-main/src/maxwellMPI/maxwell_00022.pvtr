@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VTKFile type="PRectilinearGrid" version="1.0" byte_order="LittleEndian">
+  <PRectilinearGrid GhostLevel="0" WholeExtent="0 100 0 100 0 0">
+    <Piece Source="maxwell_00022\maxwell_00022_1.vtr" Extent="0 100 0 100 0 0"/>
+    <PCoordinates>
+      <PDataArray type="Float64" Name="x" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="y" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="z" NumberOfComponents="1"/>
+    </PCoordinates>
+    <FieldData>
+      <DataArray type="Float64" Name="time" NumberOfComponents="1" NumberOfTuples="1" format="ascii">
+ 1.0999999999999877
+</DataArray>
+    </FieldData>
+    <PPointData>
+      <PDataArray type="Float64" Name="proc" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="Ex" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="Ey" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="Hz" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="eEx" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="eEy" NumberOfComponents="1"/>
+      <PDataArray type="Float64" Name="eHz" NumberOfComponents="1"/>
+    </PPointData>
+  </PRectilinearGrid>
+</VTKFile>
