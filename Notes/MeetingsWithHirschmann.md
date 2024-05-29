@@ -52,3 +52,16 @@ We spent some time talking about the determinants of pentadiagonal matrices, and
 Items worked on today:
  * Analytic solutions with the method of characteristics
  * Pentadiagonal matrix determinants
+
+
+## 5/28/2024
+Today, we talked about strategies to find the cofactor matrix recurrence relation for the pentadiagonal matrix. We found a relation for entries along the main diagonal, and our next goals are to find them for outgoing superdiagonals until we can find a pattern that works for all entries in the cofactor matrix. Once we are able to find this, we can use the cofactor matrix, along with the determinant, to find the analytic inverse.
+
+We also talked about a stencil for the tridiagonal CFD scheme that differs on the boundaries (left-shifted or right-shifted, depending on the corresponding boundary). Dr. Hirschmann found an analytic determinant for that matrix, and he is now working on finding the cofactor matrix for that version of the tridiagonal matrix.
+
+Items worked on today:
+ * Cofactor matrix for purely pentadiagonal system
+ * Inversion of tridiagonal system with shifted boundaries
+
+
+## 6/4/2024
