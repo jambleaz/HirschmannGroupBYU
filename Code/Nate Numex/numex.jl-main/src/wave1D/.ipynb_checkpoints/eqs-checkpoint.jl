@@ -58,9 +58,9 @@ function waveEqs!(dtu, u, dxu, x, dx, time)
     for i = 2:nx-1
         # Note: Changing the cfl to 0.5 gives interesting behavior after some time
         # Note: Why does original not reflect but others do?
-        #= Original
+        # Original
         dtPi[i] = dxPhi[i]
-        dtPhi[i] = dxPi[i] =#
+        dtPhi[i] = dxPi[i] 
         #= Example 1
         a0 = cos(i)
         dtPi[i] = dxPhi[i] + a0*Phi[i]
@@ -91,8 +91,8 @@ function waveEqs!(dtu, u, dxu, x, dx, time)
 #         a0 = cos(i)
 #         a1 = sin(2*i)
 #         a2 = sqrt(i)
-        dtPi[i] = dxPhi[i]
-        dtPhi[i] = dxPi[i]
+        # dtPi[i] = dxPhi[i]
+        # dtPhi[i] = dxPi[i]
         # Would need to add phi[i] and dtphi[i]
         # dtPi[i] = dxPhi[i] + a0*phi[i]
         # dtPhi[i] = dxPi[i]
@@ -109,8 +109,8 @@ function waveEqs!(dtu, u, dxu, x, dx, time)
 #     dtPhi[nx] = dtPhi[1]
     
     # Dirichlet
-    Pi[1] = 0
-    Pi[nx] = 0
+    # Pi[1] = 0
+    # Pi[nx] = 0
     
     # Neumann
 #     Phi[1] = 0
