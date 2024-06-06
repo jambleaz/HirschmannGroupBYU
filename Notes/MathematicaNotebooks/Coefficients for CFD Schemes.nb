@@ -1,0 +1,95 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2598,         87]
+NotebookOptionsPosition[      1828,         66]
+NotebookOutlinePosition[      2303,         83]
+CellTagsIndexPosition[      2260,         80]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Compact Scheme Coefficients", "Title",
+ CellChangeTimes->{{3.926692714750717*^9, 
+  3.9266927284976234`*^9}},ExpressionUUID->"f0997e9e-648a-f64c-af02-\
+1b024b59366d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["M", "^"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7a969eae-2ec3-fc40-9452-34c2d2c8ac8b"],
+ " Scheme"
+}], "Section",
+ InitializationCell->True,
+ CellChangeTimes->{{3.9266928957926197`*^9, 
+  3.926692952483841*^9}},ExpressionUUID->"9e7e3f42-8806-a742-84f1-\
+acf40015d0ad"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["M", "_"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "da6d257d-f338-9c43-88f2-933582600308"],
+ " Scheme"
+}], "Section",
+ CellChangeTimes->{{3.9266929736047*^9, 
+  3.9266929977029495`*^9}},ExpressionUUID->"5bcecc9b-6a0b-404a-8739-\
+7fa28d280efa"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["M", "`"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "562980ba-1ea8-2a46-b03f-ca2ea43ebf3f"],
+ " Scheme"
+}], "Section",
+ CellChangeTimes->{
+  3.9266929750809402`*^9, {3.9266930249018154`*^9, 
+   3.9266930305188923`*^9}},ExpressionUUID->"ca22e138-5123-8548-92e8-\
+b47740beb8e3"]
+}, Open  ]]
+},
+WindowSize->{574.8, 588.3},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"3960a3d4-7e31-8047-b5d0-a4b7cc0efd6f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 172, 3, 158, "Title",ExpressionUUID->"f0997e9e-648a-f64c-af02-1b024b59366d"],
+Cell[755, 27, 359, 11, 69, "Section",ExpressionUUID->"9e7e3f42-8806-a742-84f1-acf40015d0ad",
+ InitializationCell->True],
+Cell[1117, 40, 330, 10, 55, "Section",ExpressionUUID->"5bcecc9b-6a0b-404a-8739-7fa28d280efa"],
+Cell[1450, 52, 362, 11, 55, "Section",ExpressionUUID->"ca22e138-5123-8548-92e8-b47740beb8e3"]
+}, Open  ]]
+}
+]
+*)
+
