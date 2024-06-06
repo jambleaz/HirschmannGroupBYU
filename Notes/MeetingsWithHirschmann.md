@@ -65,3 +65,7 @@ Items worked on today:
 
 
 ## 6/4/2024
+Today, we talked with Dr. Hirschmann about our progress on the cofactors for the pentadiagonal matrix. We are a little bit stumped, so we are going to shift gears and work on inverses for the tridiagonal matrix with some different (Dirichlet) boundary conditions. We got access to the GR Google Drive folder that has many helpful and relevant papers, so we are going to be able to read through some of those now.
+
+Items worked on today:
+ * Determinants and cofactors (for inversion) of tridiagonal matrices with Dirichlet boundary conditions
