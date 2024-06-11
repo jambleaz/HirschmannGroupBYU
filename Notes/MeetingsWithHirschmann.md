@@ -69,3 +69,22 @@ Today, we talked with Dr. Hirschmann about our progress on the cofactors for the
 
 Items worked on today:
  * Determinants and cofactors (for inversion) of tridiagonal matrices with Dirichlet boundary conditions
+
+
+## 6/11/2024
+Today, we showed Dr. Hirschmann our progress with reparameterizing the determinants for the different tridiagonal matrices and finding the cofactor matrices. We talked about the different cases for the cofactor matrices and some possibilities for bounding them or simplifying the cases. We briefly talked about our progress in creating a Mathematica module that allows us to solve a system of equations to solve a boundary scheme for the variable parameters for any desired order of accuracy.
+
+Items worked on today:
+ * Showed progress on boundary tridiagonal determinant reparameterization
+ * Showed progress on boundary tridiagonal cofactor matrices
+ * Showed progress on boundary tridiagonal system of equations coefficient solver
+
+To-do items:
+ * Write formulas for the inverse of boundary tridiagonal matrices
+ * Test the inverse formula for large enough matrices ($k>20$) in Mathematica
+ * Compare the accuracy of our analytic formula with Mathematica's solution
+ * Get set up to use numerical linear algebra solvers (LAPACK)
+ * Compare the timing of our analytic formula with numerical solvers (the goal is to get $O(k)$ accuracy, rather than $O(k^2)$ accuracy)
+
+
+## 6/18/2024
