@@ -88,3 +88,17 @@ To-do items:
 
 
 ## 6/18/2024
+Today, we showed Dr. Hirschmann the inverses that we had coded up in Mathematica. We are going to work on writing out the inverses with all cases in the reparameterized forms. We talked about possible approaches to solving for the matrix $C=A^{-1}B$ in the CFD schemes. We still want to look at stability with a Fourier-like stability approach, or, seeing if the matrix $C$ is positive-definite. Dr. Hirschmann is thinking of a perturbation approach where we express $A^{-1}$ as a combination of the purely tridiagonal inverse and a perturbative term. The idea is that the new factors on the boundary have a limited impact on the inverse.
+
+Items worked on today:
+ * Showed progress on boundary tridiagonal inverses
+ * Talked about timing tests for the matrix inversion
+ * Stability analysis approaches for the matrix $C$
+
+To-do items:
+ * Write inverses in analytic, reparameterized form
+ * Perform timing tests in C++ code
+ * Work on finding the matrix $C$ and testing to see if it's positive-definite
+
+
+## 6/25/2024
