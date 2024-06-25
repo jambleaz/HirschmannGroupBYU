@@ -5,7 +5,8 @@
 #include <lapacke.h>
 #include <cblas.h>
 #include <chrono>
-#include "kim.h"  // Ensure this header defines the functions dP(n) and dQ(n, h)
+// #include "kim.h"  // Ensure this header defines the functions dP(n) and dQ(n, h)
+#include "scheme.h"
 
 int main() {
     // Sizes for the matrices
