@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 sizes = [20, 40, 80, 160, 320]
 
 # Order parameter
-O = 4.0  # You can set this to any value, here it's set to 2.0 for illustration
+O = 4.0  # You can set this to any value
 
 # Create a new figure for error plot
 plt.figure(figsize=(12, 8))
