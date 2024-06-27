@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Matrix sizes
-sizes = [20, 40, 80, 160]
+sizes = [20, 40, 80, 160, 320]
 
 # Order parameter
 O = 4.0  # You can set this to any value, here it's set to 2.0 for illustration
@@ -33,7 +33,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 
 # Save the plot
-plt.savefig('error_comparison_log_scale.png')  # Save as PNG file
+plt.savefig('error_comparison.png')  # Save as PNG file
 
 # Display the plot
 plt.show()
@@ -49,14 +49,16 @@ for n in sizes:
     error = data[:, 1]
 
     # Determine the normalization factor based on the size
-    if n == 160:
+    if n == 320:
         normalization_factor = 1
-    elif n == 80:
+    elif n == 160:
         normalization_factor = O**2
-    elif n == 40:
+    elif n == 80:
         normalization_factor = O**4
-    elif n == 20:
+    elif n == 40:
         normalization_factor = O**6
+    elif n == 20:
+        normalization_factor = O**8
 
     # Normalize the errors
     normalized_error = np.abs(error) / normalization_factor
@@ -77,7 +79,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 
 # Save the plot
-plt.savefig('convergence_test_log_scale.png')  # Save as PNG file
+plt.savefig('convergence_test.png')  # Save as PNG file
 
 # Display the plot
 plt.show()

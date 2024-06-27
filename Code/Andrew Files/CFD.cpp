@@ -1,3 +1,8 @@
+// Command to run:
+// g++ -I"C:/msys64/mingw64/include" -I"C:/msys64/mingw64/include/openblas" -L"C:/msys64/mingw64/lib" -o CFD CFD.cpp -llapacke -lopenblas -lm
+
+
+
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -5,16 +10,17 @@
 #include <lapacke.h>
 #include <cblas.h>
 #include <chrono>
-// #include "kim.h"  // Ensure this header defines the functions dP(n) and dQ(n, h)
+// Ensure this header defines the functions dP(n) and dQ(n, h)
+// #include "kim.h"
 #include "scheme.h"
 
 int main() {
     // Sizes for the matrices
-    int sizes[] = {20, 40, 80, 160};
+    int sizes[] = {20, 40, 80, 160, 320};
     std::ofstream timingFile("timing.dat");
 
     // Iterate over the different sizes
-    for (int s = 0; s < 4; ++s) {
+    for (int s = 0; s < 5; ++s) {
         int n = sizes[s];
         const double x_min = 0.0;
         const double x_max = 1.0;
