@@ -11,22 +11,24 @@ double* inverseMbar(int n, double h) {
         for (int j = 0; j < n; j++) {
             if() /*eta^2 < 0*/ {
                if (i==1 && j == 2) {
-                    Mbar[i * n + j] = g^2*sin((k-5)*g)               } else if (i == 1 && j >= 3) {
+                    Mbar[i * n + j] = g^2*sin((k-5)*g)               
+                    
+                } else if (i == 1 && j >= 3) {
 
-               } else if (i == 2 && j >= 3) {
+                } else if (i == 2 && j >= 3) {
 
-               } else {
+                } else {
 
-               }
+                }
 
             } else /*eta^2 >= 0*/ {
                 if (i==1 && j == 2) {
 
-               } else if (i == 1 && j >= 3) {
+                } else if (i == 1 && j >= 3) {
 
-               } else if (i == 2 && j >= 3) {
+                } else if (i == 2 && j >= 3) {
 
-               } else {
+                } else {
                 
                }
             }
