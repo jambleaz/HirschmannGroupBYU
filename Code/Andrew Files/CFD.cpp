@@ -84,7 +84,7 @@ int main() {
         double *error = new double[n];
         for (int i = 0; i < n; i++) {
             analytical[i] = 2 * M_PI * cos(w * x[i]);
-            error[i] = result[i] - analytical[i];
+            error[i] = (result[i] - analytical[i]);
         }
 
         // Save the results and errors to data files
