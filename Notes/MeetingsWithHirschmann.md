@@ -101,4 +101,18 @@ To-do items:
  * Work on finding the matrix $C$ and testing to see if it's positive-definite
 
 
-## 6/25/2024
+## 6/25/2024 - 8/6/2024
+Undocumented meetings.
+
+
+## 8/13/2024
+Today, we met with Dr. Hirschmann and Dr. Neilsen to discuss Kim's latest paper and his technique of extrapolating a polynomial on the boundary of a CFD scheme to determine coefficients that lead to better stability and accuracy on the boundaries. We got a little stuck when trying to catalogue all of the equations that form a system to solve for the coefficients, but we are going to keep exploring this technique in the future.
+
+Items worked on today:
+ * Talked about extrapolation polynomial in Kim's paper
+
+To-do items:
+ * Read Kim's latest paper and his previous one that is frequently referenced
+
+
+## ?/??/2024
