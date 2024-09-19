@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 sizes = [20, 40, 80, 160, 320]
 
 # Order parameter
-O = 6.0  # You can set this to any value
+O = 4.0  # You can set this to any value, here it's set to 2.0 for illustration
 
 # Create a new figure for error plot
 plt.figure(figsize=(12, 8))
@@ -33,7 +33,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 
 # Save the plot
-plt.savefig('error_comparison.png')  # Save as PNG file
+plt.savefig('error_comparison_log_scale.png')  # Save as PNG file
 
 # Display the plot
 plt.show()
@@ -79,7 +79,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 
 # Save the plot
-plt.savefig('convergence_test.png')  # Save as PNG file
+plt.savefig('convergence_test_log_scale.png')  # Save as PNG file
 
 # Display the plot
 plt.show()
@@ -87,3 +87,61 @@ plt.show()
 # Read and print timing information
 with open('timing.dat') as f:
     print(f.read())
+
+
+
+
+
+# Plot the analytic vs. numerical functions visually
+
+# Initialize lists to store x and y values from the .dat file
+x_vals = []
+y_vals_dat = []
+
+# Read the .dat file
+with open('result_320.dat', 'r') as file:
+    for line in file:
+        # Split each line into x and y values
+        x, y = line.split()
+        x_vals.append(float(x))
+        y_vals_dat.append(float(y))
+
+# Convert x_vals to a NumPy array to use for the analytic function
+x_vals_np = np.array(x_vals)
+
+# Define the analytic function (example: y = sin(x))
+def analytic_function(x):
+    return 2 * np.pi * np.cos(2 * np.pi * x)  # Replace this with your desired function
+
+# def analytic_function(x):
+#     cos_term = np.cos(2 * np.pi * x)               # cos(2 * pi * x)
+#     cos_squared = cos_term ** 2                    # cos^2(2 * pi * x)
+#     exp_term = np.exp(cos_squared)                 # exp(cos^2(2 * pi * x))
+#     exp_cubed_root = exp_term ** (1.0 / 3)         # (exp(...))^(1/3)
+#     cot_term = 1 / np.tan(exp_cubed_root)          # cot((exp(...))^(1/3))
+#     sin_term = np.sin(2 * np.pi * x)               # sin(2 * pi * x)
+#     return -(40.0 / 3.0) * exp_cubed_root * np.pi * cos_term * cot_term * sin_term  # Replace this with your desired function
+
+# Compute y values using the analytic function
+y_vals_analytic = analytic_function(x_vals_np)
+
+# Plot the .dat file data
+plt.plot(x_vals, y_vals_dat, marker='o', linestyle='-', color='b', label='Numerical Approximation')
+
+# Plot the analytic function
+plt.plot(x_vals_np, y_vals_analytic, linestyle='--', color='r', label='Analytic Function')
+
+# Set y-axis limits
+plt.ylim(-15, 15)  # Set this to your desired y-axis range
+
+# Add labels, title, and legend
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Comparison of Numerical and Analytic Results')
+plt.legend()
+
+# Show grid
+plt.grid(True)
+
+# Display the plot
+plt.show()

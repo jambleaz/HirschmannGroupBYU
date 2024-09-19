@@ -4,11 +4,9 @@
 using namespace std;
 
 double* dP(int n) {
-    double alpha = 1.0 / 3.0;
+    double alpha = 1.0 / 4.0;
 
-    double gamma01 = 5.0;
-    double gamma10 = 1.0 / 10.0;
-    double gamma12 = 1.0;
+    double gamma01 = 3.0;
 
 
 
@@ -97,12 +95,12 @@ double* dP(int n) {
     /* Row 1 */
     P[0 * n + 1] = gamma01;
 
-    P[1 * n + 0] = gamma10;
-    P[1 * n + 2] = gamma12;
+    // P[1 * n + 0] = gamma10;
+    // P[1 * n + 2] = gamma12;
 
     /* Row k */
-    P[(n - 2) * n + (n - 3)] = gamma12;
-    P[(n - 2) * n + (n - 1)] = gamma10;
+    // P[(n - 2) * n + (n - 3)] = gamma12;
+    // P[(n - 2) * n + (n - 1)] = gamma10;
 
     P[(n - 1) * n + (n - 2)] = gamma01;
 
@@ -146,21 +144,12 @@ double* dP(int n) {
 
 
 double* dQ(int n, double h) {
-    double a1 = 14.0 / 9.0;
-    double a2 = 1.0 / 9.0;
+    double a1 = 3.0 / 2.0;
 
-    double a00 =  - 197.0 / 60.0;
-    double a01 =  - 5.0 / 12.0;
-    double a02 = 5.0;
-    double a03 =  - 5.0 / 3.0;
-    double a04 = 5.0 / 12.0;
-    double a05 =  - 1.0 / 20.0;
-    double a10 =  - 227.0 / 600.0;
-    double a11 =  - 13.0 / 12.0;
-    double a12 = 7.0 / 6.0;
-    double a13 = 1.0 / 3.0;
-    double a14 =  - 1.0 / 24.0;
-    double a15 = 1.0 / 300.0;
+    double a00 =  - 17.0 / 6.0;
+    double a01 = 3.0 / 2.0;
+    double a02 = 3.0 / 2.0;
+    double a03 =  - 1.0 / 6.0;
 
 
     // Interior | O(h^4) | RHS
@@ -271,12 +260,12 @@ double* dQ(int n, double h) {
                 Q[i * n + j] = -a1;
 
             // UNCOMMENT FOR PENTADIAGONAL RHS
-            } else if (i == j - 2) {
-                // Super diagonals on
-                Q[i * n + j] = a2;
-            } else if (i == j + 2) {
-                // Super diagonals on 
-                Q[i * n + j] = -a2;
+            // } else if (i == j - 2) {
+            //     // Super diagonals on
+            //     Q[i * n + j] = a2;
+            // } else if (i == j + 2) {
+            //     // Super diagonals on 
+            //     Q[i * n + j] = -a2;
 
             // UNCOMMENT FOR SEPTADIAGONAL RHS
             // } else if (i == j - 3) {
@@ -298,15 +287,8 @@ double* dQ(int n, double h) {
     Q[0 * n + 1] = a01;
     Q[0 * n + 2] = a02;
     Q[0 * n + 3] = a03;
-    Q[0 * n + 4] = a04;
-    Q[0 * n + 5] = a05;
 
-    Q[1 * n + 0] = a10;
-    Q[1 * n + 1] = a11;
-    Q[1 * n + 2] = a12;
-    Q[1 * n + 3] = a13;
-    Q[1 * n + 4] = a14;
-    Q[1 * n + 5] = a15;
+    // Q[1 * n + 5] = a15;
     // // O(h^6)
     // Q[0 * n + 3] = a03;
     // Q[0 * n + 4] = a04;
@@ -317,15 +299,8 @@ double* dQ(int n, double h) {
     // Q[(n - 1) * n + (n - 4)] = -a03;
     // O(h^4)
 
-    Q[(n - 2) * n + (n - 6)] = -a15;
-    Q[(n - 2) * n + (n - 5)] = -a14;
-    Q[(n - 2) * n + (n - 4)] = -a13;
-    Q[(n - 2) * n + (n - 3)] = -a12;
-    Q[(n - 2) * n + (n - 2)] = -a11;
-    Q[(n - 2) * n + (n - 1)] = -a10;
+    // Q[(n - 2) * n + (n - 6)] = -a15;
 
-    Q[(n - 1) * n + (n - 6)] = -a05;
-    Q[(n - 1) * n + (n - 5)] = -a04;
     Q[(n - 1) * n + (n - 4)] = -a03;
     Q[(n - 1) * n + (n - 3)] = -a02;
     Q[(n - 1) * n + (n - 2)] = -a01;

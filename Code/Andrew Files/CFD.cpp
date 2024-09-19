@@ -1,6 +1,7 @@
-// Command to run:
+// To run:
 // g++ -I"C:/msys64/mingw64/include" -I"C:/msys64/mingw64/include/openblas" -L"C:/msys64/mingw64/lib" -o CFD CFD.cpp -llapacke -lopenblas -lm
-
+// .\CFD.exe
+// python plot.py
 
 
 #include <iostream>
@@ -10,9 +11,9 @@
 #include <lapacke.h>
 #include <cblas.h>
 #include <chrono>
-// Ensure this header defines the functions dP(n) and dQ(n, h)
 // #include "kim.h"
-#include "scheme.h"
+#include "scheme4.h"
+// #include "scheme6.h"
 
 int main() {
     // Sizes for the matrices
@@ -73,6 +74,7 @@ int main() {
         double *f = new double[n];
         for (int i = 0; i < n; i++) {
             f[i] = sin(w * x[i]);
+            // f[i] = 10 * log(sin(pow(exp(cos(2 * M_PI * x[i]) * cos(2 * M_PI * x[i])), 1.0 / 3)));
         }
 
         // Compute the product of matrix R and f
@@ -83,8 +85,9 @@ int main() {
         double *analytical = new double[n];
         double *error = new double[n];
         for (int i = 0; i < n; i++) {
-            analytical[i] = 2 * M_PI * cos(w * x[i]);
-            error[i] = (result[i] - analytical[i]);
+            analytical[i] = w * cos(w * x[i]);
+            // analytical[i] = -(40.0 / 3.0) * (pow(exp(cos(2 * M_PI * x[i]) * cos(2 * M_PI * x[i])), 1.0 / 3)) * M_PI * (cos(2 * M_PI * x[i])) * (1 / tan(pow(exp(cos(2 * M_PI * x[i]) * cos(2 * M_PI * x[i])), 1.0 / 3))) * (sin(2 * M_PI * x[i]));
+            error[i] = result[i] - analytical[i];
         }
 
         // Save the results and errors to data files
