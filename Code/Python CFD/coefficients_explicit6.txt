@@ -1,0 +1,4 @@
+double alpha = 0.0;
+double a1 = 2.0 * (3.0 / 4.0);
+double a2 = 4.0 * (-3.0 / 20.0);
+double a3 = 6.0 * (1.0 / 60.0);

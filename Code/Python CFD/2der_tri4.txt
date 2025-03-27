@@ -1,0 +1,8 @@
+double a1 = 6.0 / 5.0;
+double alpha = 1.0 / 10.0;
+double a00 = 145.0 / 12.0;
+double a01 =  - 76.0 / 3.0;
+double a02 = 29.0 / 2.0;
+double a03 =  - 4.0 / 3.0;
+double a04 = 1.0 / 12.0;
+double gamma01 = 10.0;
