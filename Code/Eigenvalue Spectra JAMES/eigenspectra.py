@@ -30,6 +30,15 @@ def parse_coefficients(file_path):
 
 
 def create_p_matrix(coeffs, matrix_size, alpha_value, beta_value):
+    """Creates left hand side CFD matrix p.
+    
+    Keyword Arguments:
+    coeffs      -- list of coefficients parsed from input file
+    matrix_size -- number of points on grid
+    alpha_value -- coeff value for first off diagonal
+    beta_value  -- coeff value for second off diagonal
+    """
+
     p = np.zeros((matrix_size, matrix_size))
     np.fill_diagonal(p, 1)  # Identity matrix
 
@@ -50,7 +59,20 @@ def create_p_matrix(coeffs, matrix_size, alpha_value, beta_value):
 
     return p
 
+
+
 def create_q_matrix(coeffs, h, matrix_size, a1_value, a2_value, a3_value):
+    """Creates right hand side CFD matrix q.
+    
+    Keyword Arguments:
+    coeffs      -- list of coefficients parsed from input file
+    h           -- grid spacing
+    matrix_size -- number of points on grid
+    a1_value    -- value of a1 coeff
+    a2_value    -- value of a2 coeff
+    a3_value    -- value of a3
+    """
+
     q = np.zeros((matrix_size, matrix_size))
     middle_index = matrix_size // 2
 
@@ -98,39 +120,45 @@ def create_q_matrix(coeffs, h, matrix_size, a1_value, a2_value, a3_value):
 
 
 coeff_files = ['shu_ccs_t6','tyler_p6','tyler_t4','bradliv_t6','kim24_t6']
-# 'tyler_p10'
 
-for file in coeff_files:
+def find_eigenvalue_spectra(file, matrix_size):
     coefficients, alpha_value, beta_value, a1_value, a2_value, a3_value = parse_coefficients(f"{file}.txt")
-    matrix_size = 92
+    # matrix_size = 92
     h = 1.0 / (matrix_size - 1)
-    # h = 1.0
 
     p_matrix = create_p_matrix(coefficients, matrix_size, alpha_value, beta_value)
     q_matrix = create_q_matrix(coefficients, h, matrix_size, a1_value, a2_value, a3_value)
     # print(p_matrix)
     # print(q_matrix)
 
-    lu, piv = lu_factor(p_matrix)
-    pinv_matrix = inv(p_matrix)
+    line1p = np.zeros(matrix_size)
+    line1p[0] = 1
+    line1q = np.zeros(matrix_size)
 
-    R = dgemm(alpha=1.0, a=pinv_matrix, b=q_matrix)
-    R_new = R[1:,1:]
+    p_new = p_matrix
+    p_new[0] = line1p
+    q_new = q_matrix
+    q_new[0] = line1q
+
+    lu, piv = lu_factor(p_new)
+    pinv_matrix = inv(p_new)
+
+    R = dgemm(alpha=1.0, a=pinv_matrix, b=q_new)
     # R_new = R
     # print(R)
     # print(R_new)
 
 
-    eigenvalues, eigenvectors = np.linalg.eig(R)
-    eigenvalues2, eigenvectors2 = np.linalg.eig(R_new)
+    # eigenvalues, eigenvectors = np.linalg.eig(R)
+    eigenvalues2, eigenvectors2 = np.linalg.eig(R)
     # print(eigenvalues)
     # print(eigenvalues2)
 
 
     real = -eigenvalues2.real
     imag = eigenvalues2.imag
-    # print(real)
-    # print(imag)
+        # print(real)
+        # print(imag)
 
     re_max = max(real)
     print(f"Max Real for {file}: {re_max}")
@@ -149,6 +177,8 @@ for file in coeff_files:
     plt.savefig(f"{file}.png")
     plt.clf()
 
+for file in coeff_files:
+    find_eigenvalue_spectra(file,82)
 
 
 
