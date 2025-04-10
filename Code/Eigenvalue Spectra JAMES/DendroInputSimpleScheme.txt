@@ -1,0 +1,47 @@
+MatrixDiagonalEntries* BYUDerivsT4R2DiagonalsFirstOrder(
+	const std::vector<double>& D_coeffs) {
+		double alpha0 = 1.0 / 4.0;
+		double alpha = alpha0 + D_coeffs[0];
+
+		double a1 = 3.0 / 2.0;
+		double a00 =  - 17.0 / 6.0;
+		double a01 = 3.0 / 2.0;
+		double a02 = 3.0 / 2.0;
+		double a03 =  - 1.0 / 6.0;
+		double a10 =  - 5.0 / 9.0;
+		double a11 =  - 1.0 / 2.0;
+		double a12 = 1.0;
+		double a13 = 1.0 / 18.0;
+		double gamma01 = 3.0;
+		double gamma10 = 1.0 / 6.0;
+		double gamma12 = 1.0 / 2.0;
+
+		// boundary elements for P matrix for 1st derivative
+		std::vector<std::vector<double>> P1DiagBoundary{
+			{1.0, gamma01}
+			{gamma10, 1.0, gamma12}
+		};
+
+		// diagonal elements for P matrix for 1st derivative
+		std::vector<double> P1DiagInterior{
+			alpha, 1.0, alpha
+		};
+
+		// boundary elements for Q matrix for 1st derivative
+		std::vector<std::vector<double>> Q1DiagBoundary{
+			{a00, a01, a02, a03}
+			{a10, a11, a12, a13}
+		};
+
+		// diagonal elements for Q matrix for 1st derivative
+		std::vector<double> Q1DiagInterior{
+			-a1/2.0, 0.0, a1/2.0
+		};
+
+		// store the entries for matrix creation
+		MatrixDiagonalEntries* diagEntries = new
+			MatrixDiagonalEntries{
+				P1DiagInterior, P1DiagBoundary, Q1DiagInterior, Q1DiagBoundary
+			};
+		return diagEntries;
+	}
