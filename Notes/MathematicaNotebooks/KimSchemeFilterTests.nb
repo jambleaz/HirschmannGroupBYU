@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      4681,        148]
-NotebookOptionsPosition[      3717,        122]
-NotebookOutlinePosition[      4277,        142]
-CellTagsIndexPosition[      4234,        139]
+NotebookDataLength[      4742,        150]
+NotebookOptionsPosition[      3778,        124]
+NotebookOutlinePosition[      4338,        144]
+CellTagsIndexPosition[      4295,        141]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -81,31 +81,33 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{
-    RowBox[{"T", "(", "\[Kappa]", ")"}], "=", 
-    RowBox[{"1", "+", 
-     FractionBox[
-      RowBox[{"2", 
-       RowBox[{
-        UnderoverscriptBox["\[Sum]", 
-         RowBox[{"m", "=", "1"}], 
-         RowBox[{"n", "/", "2"}]], 
+    RowBox[{
+     RowBox[{"T", "(", "\[Kappa]", ")"}], "=", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{"2", 
         RowBox[{
-         SubscriptBox["a", "m"], "[", 
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"m", "=", "1"}], 
+          RowBox[{"n", "/", "2"}]], 
          RowBox[{
-          RowBox[{"cos", "(", 
-           RowBox[{"m", " ", "\[Kappa]"}], ")"}], "-", "1"}], "]"}]}]}], 
-      RowBox[{"1", "+", 
-       RowBox[{"2", "\[Alpha]", " ", 
-        RowBox[{"cos", "(", "\[Kappa]", ")"}]}], " ", "+", " ", 
-       RowBox[{"2", "\[Beta]", " ", 
-        RowBox[{"cos", "(", 
-         RowBox[{"2", "\[Kappa]"}], ")"}]}]}]]}]}], TraditionalForm]],
+          SubscriptBox["a", "m"], "[", 
+          RowBox[{
+           RowBox[{"cos", "(", 
+            RowBox[{"m", " ", "\[Kappa]"}], ")"}], "-", "1"}], "]"}]}]}], 
+       RowBox[{"1", "+", 
+        RowBox[{"2", "\[Alpha]", " ", 
+         RowBox[{"cos", "(", "\[Kappa]", ")"}]}], " ", "+", " ", 
+        RowBox[{"2", "\[Beta]", " ", 
+         RowBox[{"cos", "(", 
+          RowBox[{"2", "\[Kappa]"}], ")"}]}]}]]}]}], "\[IndentingNewLine]"}], 
+   TraditionalForm]],
   FormatType->TraditionalForm,ExpressionUUID->
   "a2e4851e-7776-6240-a3fe-d065deccbb39"]
 }], "Text",
  CellChangeTimes->{{3.9550189430076237`*^9, 3.9550190531668797`*^9}, {
   3.9550194052434044`*^9, 
-  3.9550194953756332`*^9}},ExpressionUUID->"21fbe7e6-72e3-4b4b-b514-\
+  3.9550195000682125`*^9}},ExpressionUUID->"21fbe7e6-72e3-4b4b-b514-\
 4d880d9e48e5"]
 }, Open  ]],
 
@@ -145,11 +147,11 @@ Cell[CellGroupData[{
 Cell[576, 22, 160, 3, 68, "Section",ExpressionUUID->"86e150aa-c0a9-1a4a-8d84-3cc18f0cc6a0"],
 Cell[CellGroupData[{
 Cell[761, 29, 160, 3, 53, "Subsection",ExpressionUUID->"b61c9f43-76fa-c74e-ac4f-9433f71f47d2"],
-Cell[924, 34, 2439, 74, 110, "Text",ExpressionUUID->"21fbe7e6-72e3-4b4b-b514-4d880d9e48e5"]
+Cell[924, 34, 2500, 76, 135, "Text",ExpressionUUID->"21fbe7e6-72e3-4b4b-b514-4d880d9e48e5"]
 }, Open  ]],
-Cell[3378, 111, 158, 3, 53, "Subsection",ExpressionUUID->"eb35bc11-4714-a94a-9fe3-3b7a19973d00"]
+Cell[3439, 113, 158, 3, 53, "Subsection",ExpressionUUID->"eb35bc11-4714-a94a-9fe3-3b7a19973d00"]
 }, Open  ]],
-Cell[3551, 117, 162, 3, 68, "Section",ExpressionUUID->"eb946906-e60d-7b41-8f51-201331246b18"]
+Cell[3612, 119, 162, 3, 68, "Section",ExpressionUUID->"eb946906-e60d-7b41-8f51-201331246b18"]
 }
 ]
 *)
