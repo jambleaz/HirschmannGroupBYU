@@ -140,7 +140,7 @@ def find_eigenvalue_spectra(file, matrix_size):
     q_new = q_matrix
     q_new[0] = line1q
 
-    lu, piv = lu_factor(p_new)
+    # lu, piv = lu_factor(p_new)
     pinv_matrix = inv(p_new)
 
     R = dgemm(alpha=1.0, a=pinv_matrix, b=q_new)
